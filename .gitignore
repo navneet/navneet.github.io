@@ -1,1 +1,5 @@
-.lh
+/node_modules/
+/dist/
+/.vscode/
+/.lh/
+.DS_Store
