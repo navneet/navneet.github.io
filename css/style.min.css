@@ -57,6 +57,10 @@ button select input:focus {
 button {
   cursor: pointer;
 }
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
 
 /**Custom Convinience Classes */
 .hide {
@@ -79,9 +83,22 @@ button {
   }
 }
 
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.5;
+main {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: stretch;
+  margin: 2.5rem 4%;
+  z-index: 1;
+}
+@media screen and (min-width: 40rem) {
+  main {
+    margin: 2.5rem 8%;
+  }
+}
+@media screen and (min-width: 80rem) {
+  main {
+    margin: 2.5rem 15%;
+  }
 }
 
 button.round-button {
@@ -93,24 +110,24 @@ button.round-button {
   overflow: hidden;
   box-shadow: 0 1.3rem 2.7rem -0.5rem rgba(50, 50, 93, 0.25), 0 0.8rem 1.6rem -0.8rem rgba(0, 0, 0, 0.3), 0 -0.6rem 1.6rem -0.6rem rgba(0, 0, 0, 0.03);
 }
-
-button.round-button.active, button.round-button:active {
+button.round-button:active, button.round-button.active {
   box-shadow: 0 1.3rem 2.7rem -0.5rem rgba(50, 50, 93, 0.25) inset, 0 0.8rem 1.6rem -0.8rem rgba(0, 0, 0, 0.3) inset, 0 -0.6rem 1.6rem -0.6rem rgba(0, 0, 0, 0.03) inset;
 }
-
-button.icon-button {
-  min-width: 24px;
+button.round-button.icon-button {
+  padding: 0.5rem;
 }
-button.icon-button > * {
+button.round-button.icon-button > img, button.round-button.icon-button > svg {
   opacity: 0.6;
+  min-width: 24px;
+  min-height: 24px;
 }
 
 button.default-button {
   background-color: ghostwhite;
   border-radius: 0.25rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
-  color: rgba(0, 0, 0, 0.85);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+  color: rgba(20, 20, 20, 0.85);
   font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.1;
@@ -120,24 +137,17 @@ button.default-button {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-
-button.default-button:hover,
-button.default-button:focus {
+button.default-button:hover, button.default-button:focus {
+  background-color: ghostwhite;
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
-  color: rgba(0, 0, 0, 0.65);
+  color: #141414;
 }
-
-button.default-button:hover {
-  transform: translateY(-1px);
-}
-
 button.default-button:active {
-  background-color: #F0F0F1;
+  background-color: #353818;
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
-  color: rgba(0, 0, 0, 0.65);
-  transform: translateY(0);
+  color: #bebebe;
 }
 
 form.settings-form {
@@ -160,19 +170,19 @@ form.settings-form fieldset legend {
   margin: 0 0.75rem;
   padding: 0 0.25rem;
 }
-form.settings-form ul {
+form.settings-form ul, form.settings-form ol {
   display: flex;
   flex-flow: row wrap;
 }
-form.settings-form li {
-  flex: 1 1 50%;
+form.settings-form ul li, form.settings-form ol li {
+  flex: 1 1 100%;
   display: flex;
   justify-content: space-between;
   padding: 0.4rem;
   border-bottom: 1px dotted rgba(100, 100, 100, 0.3);
   border-right: 1px dotted rgba(100, 100, 100, 0.8);
 }
-form.settings-form li.active {
+form.settings-form ul li.active, form.settings-form ol li.active {
   animation: bgFade 0.2s ease;
   background-color: rgba(100, 100, 100, 0.1);
 }
@@ -184,7 +194,7 @@ form.settings-form li.active {
     background-color: rgba(100, 100, 100, 0.1);
   }
 }
-form.settings-form li.inactive {
+form.settings-form ul li.inactive, form.settings-form ol li.inactive {
   animation: bgFade 0.1s ease;
 }
 @keyframes bgFade {
@@ -193,6 +203,11 @@ form.settings-form li.inactive {
   }
   100% {
     background-color: rgba(100, 100, 100, 0);
+  }
+}
+@media screen and (min-width: 40rem) {
+  form.settings-form ul li, form.settings-form ol li {
+    flex: 1 1 50%;
   }
 }
 form.settings-form label {
@@ -221,6 +236,10 @@ form.settings-form input[type=number].bold, form.settings-form input[type=text].
 form.settings-form input:focus, form.settings-form input:active, form.settings-form select:focus, form.settings-form select:active {
   outline: 0;
 }
+form.settings-form input:focus, form.settings-form input:active {
+  background-color: white;
+  border: 1px inset rgba(90, 134, 32, 0.8);
+}
 form.settings-form select {
   cursor: pointer;
 }
@@ -231,12 +250,12 @@ form.settings-form input[type=number]::-webkit-outer-spin-button {
 }
 @media screen and (min-width: 40rem) {
   form.settings-form {
-    margin: 0 8%;
+    margin: 0 6%;
   }
 }
 @media screen and (min-width: 80rem) {
   form.settings-form {
-    margin: 0 15%;
+    margin: 0 10%;
   }
 }
 
@@ -244,6 +263,7 @@ label.value-tower {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  flex: 0 0 10rem;
   border: 1px dotted rgba(100, 100, 100, 0.5);
 }
 label.value-tower > span {
@@ -252,8 +272,7 @@ label.value-tower > span {
   font-weight: normal;
   text-shadow: 0.05rem 0.05rem 0 rgba(100, 100, 100, 0.5);
   border-bottom: 1px dotted rgba(100, 100, 100, 0.5);
-  margin: 0.2rem 0;
-  padding: 0.2rem;
+  padding: 0.3rem 0;
 }
 label.value-tower > input[type=text] {
   resize: none;
@@ -262,12 +281,8 @@ label.value-tower > input[type=text] {
   border: none;
   text-align: center;
   font-weight: 600;
-  min-width: 1rem;
+  max-width: 6rem;
   font-size: 1.35rem;
-}
-label.value-tower > input[type=text].spaced {
-  line-height: 1.5rem;
-  min-height: 2.505rem;
 }
 label.value-tower > input[type=text]:read-only {
   pointer-events: none;
@@ -386,6 +401,7 @@ header ul.menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  z-index: -1;
   /* Animation - Close */
 }
 header ul.menu.open {
@@ -402,12 +418,18 @@ header ul.menu.open {
   }
 }
 header ul.menu.open li.menu-link {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   width: 25%;
   margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(100, 100, 100, 0.5);
+  background-attachment: fixed;
+  background-blend-mode: multiply;
   transition: all 0.4s ease-in-out;
   animation: menu 0.6s ease forwards;
   /* Main Link - text */
@@ -436,27 +458,15 @@ header ul.menu.open li.menu-link {
   }
 }
 header ul.menu.open li.menu-link:nth-child(1) {
-  background-color: rgba(100, 100, 100, 0.5);
-  background-attachment: fixed;
-  background-blend-mode: multiply;
   animation-duration: 0.6s;
 }
 header ul.menu.open li.menu-link:nth-child(2) {
-  background-color: rgba(100, 100, 100, 0.5);
-  background-attachment: fixed;
-  background-blend-mode: multiply;
   animation-duration: 0.8s;
 }
 header ul.menu.open li.menu-link:nth-child(3) {
-  background-color: rgba(100, 100, 100, 0.5);
-  background-attachment: fixed;
-  background-blend-mode: multiply;
   animation-duration: 1s;
 }
 header ul.menu.open li.menu-link:nth-child(4) {
-  background-color: rgba(100, 100, 100, 0.5);
-  background-attachment: fixed;
-  background-blend-mode: multiply;
   animation-duration: 1.2s;
 }
 header ul.menu.open li.menu-link .text-item {
@@ -695,6 +705,101 @@ header ul.menu.close li.menu-link .text-item {
   }
 }
 
+.scroll-row {
+  overflow-x: hidden;
+}
+.scroll-row > ol,
+.scroll-row > ul {
+  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  display: flex;
+  flex-flow: row nowrap;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+}
+.scroll-row > ol::-webkit-scrollbar,
+.scroll-row > ul::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+.scroll-row > ol > li,
+.scroll-row > ul > li {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  min-width: 100vw;
+  scroll-snap-align: center;
+}
+@media screen and (min-width: 40rem) {
+  .scroll-row > ol > li,
+.scroll-row > ul > li {
+    min-width: 50vw;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .scroll-row > ol > li,
+.scroll-row > ul > li {
+    min-width: 40vw;
+  }
+}
+.scroll-row > ol > li.highlight,
+.scroll-row > ul > li.highlight {
+  box-shadow: #555bff 0px 0px 0px 3px, #1fc11b 0px 0px 0px 6px, #ffd913 0px 0px 0px 9px, #ff9c55 0px 0px 0px 12px, #ff5555 0px 0px 0px 15px;
+  transition: box-shadow 4s ease-in 1s;
+}
+.scroll-row > ol > li > div,
+.scroll-row > ul > li > div {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 0.6rem;
+  margin-bottom: 0.5rem;
+}
+.scroll-row > ol > li > div > h6, .scroll-row > ol > li > div > span, .scroll-row > ol > li > div > img,
+.scroll-row > ul > li > div > h6,
+.scroll-row > ul > li > div > span,
+.scroll-row > ul > li > div > img {
+  padding: 0.25rem;
+}
+.scroll-row > ol > li > div > h6,
+.scroll-row > ul > li > div > h6 {
+  font-size: medium;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-shadow: rgba(100, 100, 100, 0.5) 0 0.05rem 0.05rem;
+}
+.scroll-row > ol > li > div > span,
+.scroll-row > ul > li > div > span {
+  font-size: smaller;
+}
+.scroll-row > ol > li > div > img,
+.scroll-row > ul > li > div > img {
+  width: 24px;
+  height: 24px;
+}
+@media screen and (min-width: 40rem) {
+  .scroll-row > ol > li > div > img,
+.scroll-row > ul > li > div > img {
+    width: 32px;
+    height: 32px;
+  }
+}
+@media screen and (min-width: 80rem) {
+  .scroll-row > ol > li > div > img,
+.scroll-row > ul > li > div > img {
+    width: 48px;
+    height: 48px;
+  }
+}
+.scroll-row > ol > li > div.completed,
+.scroll-row > ul > li > div.completed {
+  text-decoration: line-through;
+}
+.scroll-row > ol > li > div.completed > h6,
+.scroll-row > ul > li > div.completed > h6 {
+  font-weight: initial;
+}
+
 .spinner {
   width: 40px;
   height: 40px;
@@ -737,33 +842,6 @@ header ul.menu.close li.menu-link .text-item {
     -webkit-transform: scale(1);
   }
 }
-/** App Specific */
-/*.main-app {
-    display: flex;
-    flex-flow: column nowrap;
-}*/
-div.main-content {
-  display: flex;
-  flex-flow: column nowrap;
-  flex: 1;
-  align-items: center;
-  margin: 2.5rem 4% 1rem;
-  z-index: 1;
-  /*@include tablet-screens {
-      margin: 2.5rem 18% 1rem;
-  }
-
-  @include large-screens {
-      margin: 2.5rem 25% 1rem;
-  }*/
-}
-
-div.main-component {
-  display: flex;
-  flex-flow: column nowrap;
-  align-self: stretch;
-}
-
 ol.row-cards, ul.row-cards {
   display: flex;
   flex-flow: row wrap;
@@ -780,5 +858,20 @@ ol.row-cards li, ul.row-cards li {
   ol.row-cards li, ul.row-cards li {
     flex: 1 1 50%;
     margin: 1rem;
+  }
+}
+
+.yt-iframe-container {
+  align-self: center;
+  padding: 1.75rem;
+}
+.yt-iframe-container > iframe {
+  width: 320px;
+  height: 240px;
+}
+@media screen and (min-width: 40rem) {
+  .yt-iframe-container > iframe {
+    width: 640px;
+    height: 480px;
   }
 }
