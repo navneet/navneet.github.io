@@ -1,10 +1,10 @@
 {
   ".svelte-kit/runtime/client/start.js": {
-    "file": "start-43f8940f.js",
+    "file": "start-35544d0c.js",
     "src": ".svelte-kit/runtime/client/start.js",
     "isEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
+      "_vendor-5de77269.js",
       "_singletons-a6a7384f.js"
     ],
     "dynamicImports": [
@@ -13,141 +13,124 @@
       "src/routes/index.svelte",
       "src/routes/routine/__layout.svelte",
       "src/routes/routine/index.svelte",
-      "src/routes/routine/tabata/index.svelte",
-      "src/routes/routine/tabata/[slug].svelte",
+      "src/routes/routine/tabata.svelte",
       "src/routes/routine/timer.svelte",
       "src/routes/workout.svelte",
       "src/routes/music.svelte"
     ]
   },
   "src/routes/__layout.svelte": {
-    "file": "pages/__layout.svelte-198d6e33.js",
+    "file": "pages/__layout.svelte-837d4ff8.js",
     "src": "src/routes/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
-      "_helpers-b17530cd.js",
-      "_stores-aaabab89.js",
-      "_appStore-81b2c633.js"
+      "_vendor-5de77269.js",
+      "_helpers-c419cb44.js",
+      "_stores-a390861c.js",
+      "_appStore-d18b293f.js"
     ],
     "css": [
       "assets/pages/__layout.svelte-5a19a042.css"
     ]
   },
   "src/routes/__error.svelte": {
-    "file": "pages/__error.svelte-60db80fa.js",
+    "file": "pages/__error.svelte-928b63ec.js",
     "src": "src/routes/__error.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js"
+      "_vendor-5de77269.js"
     ],
     "css": [
       "assets/pages/__error.svelte-7a178442.css"
     ]
   },
   "src/routes/index.svelte": {
-    "file": "pages/index.svelte-7abb7023.js",
+    "file": "pages/index.svelte-f3592a8b.js",
     "src": "src/routes/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
+      "_vendor-5de77269.js",
       "_navigation-bd39ff07.js",
       "_singletons-a6a7384f.js"
     ]
   },
   "src/routes/routine/__layout.svelte": {
-    "file": "pages/routine/__layout.svelte-5cc182c7.js",
+    "file": "pages/routine/__layout.svelte-8651f2a5.js",
     "src": "src/routes/routine/__layout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
-      "_stores-aaabab89.js",
-      "_appStore-81b2c633.js",
-      "_ViewTitle-96aa6a7e.js"
+      "_vendor-5de77269.js",
+      "_stores-a390861c.js",
+      "_appStore-d18b293f.js",
+      "_ViewTitle-5b424108.js"
     ],
     "css": [
       "assets/pages/routine/__layout.svelte-7ffc1827.css"
     ]
   },
   "src/routes/routine/index.svelte": {
-    "file": "pages/routine/index.svelte-b134f996.js",
+    "file": "pages/routine/index.svelte-926871a6.js",
     "src": "src/routes/routine/index.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
+      "_vendor-5de77269.js",
       "_navigation-bd39ff07.js",
-      "_appStore-81b2c633.js",
+      "_appStore-d18b293f.js",
       "_singletons-a6a7384f.js"
     ]
   },
-  "src/routes/routine/tabata/index.svelte": {
-    "file": "pages/routine/tabata/index.svelte-ed5f3c90.js",
-    "src": "src/routes/routine/tabata/index.svelte",
+  "src/routes/routine/tabata.svelte": {
+    "file": "pages/routine/tabata.svelte-be77a853.js",
+    "src": "src/routes/routine/tabata.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
+      "_vendor-5de77269.js",
       "_navigation-bd39ff07.js",
-      "_appStore-81b2c633.js",
-      "_exerciseCard-e37a03e6.js",
-      "_helpers-b17530cd.js",
-      "_playPauseToggleIcon-c53c4cba.js",
-      "_TimeKeeper-bb206348.js",
+      "_stores-a390861c.js",
+      "_appStore-d18b293f.js",
+      "_exerciseCard-175ef08d.js",
+      "_helpers-c419cb44.js",
+      "_playPauseToggleIcon-b3ad00ea.js",
+      "_TimeKeeper-fcf2bb72.js",
       "_singletons-a6a7384f.js"
     ],
     "css": [
-      "assets/pages/routine/tabata/index.svelte-8660d5bc.css"
-    ]
-  },
-  "src/routes/routine/tabata/[slug].svelte": {
-    "file": "pages/routine/tabata/_slug_.svelte-8fc5d033.js",
-    "src": "src/routes/routine/tabata/[slug].svelte",
-    "isEntry": true,
-    "isDynamicEntry": true,
-    "imports": [
-      "_vendor-31fcb76f.js",
-      "_navigation-bd39ff07.js",
-      "_appStore-81b2c633.js",
-      "_playPauseToggleIcon-c53c4cba.js",
-      "src/routes/routine/tabata/index.svelte",
-      "_singletons-a6a7384f.js",
-      "_helpers-b17530cd.js",
-      "_exerciseCard-e37a03e6.js",
-      "_TimeKeeper-bb206348.js"
+      "assets/pages/routine/tabata.svelte-04c8fb4a.css"
     ]
   },
   "src/routes/routine/timer.svelte": {
-    "file": "pages/routine/timer.svelte-2e21d361.js",
+    "file": "pages/routine/timer.svelte-5065f9fb.js",
     "src": "src/routes/routine/timer.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
-      "_appStore-81b2c633.js",
-      "_helpers-b17530cd.js",
-      "_playPauseToggleIcon-c53c4cba.js",
-      "_TimeKeeper-bb206348.js"
+      "_vendor-5de77269.js",
+      "_appStore-d18b293f.js",
+      "_helpers-c419cb44.js",
+      "_playPauseToggleIcon-b3ad00ea.js",
+      "_TimeKeeper-fcf2bb72.js"
     ]
   },
   "src/routes/workout.svelte": {
-    "file": "pages/workout.svelte-45a1b122.js",
+    "file": "pages/workout.svelte-02aaf650.js",
     "src": "src/routes/workout.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
+      "_vendor-5de77269.js",
       "_navigation-bd39ff07.js",
-      "_appStore-81b2c633.js",
-      "_ViewTitle-96aa6a7e.js",
-      "_helpers-b17530cd.js",
-      "_exerciseCard-e37a03e6.js",
-      "_playPauseToggleIcon-c53c4cba.js",
-      "_stores-aaabab89.js",
+      "_appStore-d18b293f.js",
+      "_ViewTitle-5b424108.js",
+      "_helpers-c419cb44.js",
+      "_exerciseCard-175ef08d.js",
+      "_playPauseToggleIcon-b3ad00ea.js",
+      "_stores-a390861c.js",
       "_singletons-a6a7384f.js"
     ],
     "css": [
@@ -155,41 +138,41 @@
     ]
   },
   "src/routes/music.svelte": {
-    "file": "pages/music.svelte-b750c2b7.js",
+    "file": "pages/music.svelte-33812986.js",
     "src": "src/routes/music.svelte",
     "isEntry": true,
     "isDynamicEntry": true,
     "imports": [
-      "_vendor-31fcb76f.js",
-      "_appStore-81b2c633.js",
-      "_ViewTitle-96aa6a7e.js"
+      "_vendor-5de77269.js",
+      "_appStore-d18b293f.js",
+      "_ViewTitle-5b424108.js"
     ]
   },
-  "_vendor-31fcb76f.js": {
-    "file": "chunks/vendor-31fcb76f.js"
+  "_vendor-5de77269.js": {
+    "file": "chunks/vendor-5de77269.js"
   },
   "_singletons-a6a7384f.js": {
     "file": "chunks/singletons-a6a7384f.js"
   },
-  "_helpers-b17530cd.js": {
-    "file": "chunks/helpers-b17530cd.js",
+  "_helpers-c419cb44.js": {
+    "file": "chunks/helpers-c419cb44.js",
     "imports": [
-      "_vendor-31fcb76f.js"
+      "_vendor-5de77269.js"
     ],
     "css": [
       "assets/helpers-0220620d.css"
     ]
   },
-  "_stores-aaabab89.js": {
-    "file": "chunks/stores-aaabab89.js",
+  "_stores-a390861c.js": {
+    "file": "chunks/stores-a390861c.js",
     "imports": [
-      "_vendor-31fcb76f.js"
+      "_vendor-5de77269.js"
     ]
   },
-  "_appStore-81b2c633.js": {
-    "file": "chunks/appStore-81b2c633.js",
+  "_appStore-d18b293f.js": {
+    "file": "chunks/appStore-d18b293f.js",
     "imports": [
-      "_vendor-31fcb76f.js"
+      "_vendor-5de77269.js"
     ]
   },
   "_navigation-bd39ff07.js": {
@@ -198,38 +181,38 @@
       "_singletons-a6a7384f.js"
     ]
   },
-  "_ViewTitle-96aa6a7e.js": {
-    "file": "chunks/ViewTitle-96aa6a7e.js",
+  "_ViewTitle-5b424108.js": {
+    "file": "chunks/ViewTitle-5b424108.js",
     "imports": [
-      "_vendor-31fcb76f.js"
+      "_vendor-5de77269.js"
     ]
   },
-  "_exerciseCard-e37a03e6.js": {
-    "file": "chunks/exerciseCard-e37a03e6.js",
+  "_playPauseToggleIcon-b3ad00ea.js": {
+    "file": "chunks/playPauseToggleIcon-b3ad00ea.js",
     "imports": [
-      "_vendor-31fcb76f.js",
-      "_helpers-b17530cd.js"
-    ],
-    "css": [
-      "assets/exerciseCard-544fb1a8.css"
-    ]
-  },
-  "_playPauseToggleIcon-c53c4cba.js": {
-    "file": "chunks/playPauseToggleIcon-c53c4cba.js",
-    "imports": [
-      "_vendor-31fcb76f.js",
-      "_helpers-b17530cd.js",
-      "_appStore-81b2c633.js"
+      "_vendor-5de77269.js",
+      "_helpers-c419cb44.js",
+      "_appStore-d18b293f.js"
     ],
     "css": [
       "assets/playPauseToggleIcon-49d9c94a.css"
     ]
   },
-  "_TimeKeeper-bb206348.js": {
-    "file": "chunks/TimeKeeper-bb206348.js",
+  "_exerciseCard-175ef08d.js": {
+    "file": "chunks/exerciseCard-175ef08d.js",
     "imports": [
-      "_vendor-31fcb76f.js",
-      "_helpers-b17530cd.js"
+      "_vendor-5de77269.js",
+      "_helpers-c419cb44.js"
+    ],
+    "css": [
+      "assets/exerciseCard-544fb1a8.css"
+    ]
+  },
+  "_TimeKeeper-fcf2bb72.js": {
+    "file": "chunks/TimeKeeper-fcf2bb72.js",
+    "imports": [
+      "_vendor-5de77269.js",
+      "_helpers-c419cb44.js"
     ]
   }
 }
